@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: derived
+    schema: derived
+    tables:
+      - name: snowplow_web_page_views
+      - name: snowplow_web_sessions
+      - name: snowplow_web_user_mapping
+      - name: snowplow_web_users
+      - name: snowplow_fractribution_conversions_by_customer_id
+
+  - name: atomic
+    database: prod
+    schema: atomic
+    tables:
+      - name: events
